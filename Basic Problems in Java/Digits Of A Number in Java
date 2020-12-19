@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) 
+    {
+        // write your code here  
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int pow = 1;
+        int temp = num;
+
+        while (temp >= 10)
+        {
+            pow *= 10;
+            temp /= 10;
+        }
+        temp = num;
+        while(pow != 0)
+        {
+            int digit = temp / pow;
+            System.out.println(digit);
+            
+            temp %= pow;
+            pow /= 10;
+            
+        }
+    }
+}
